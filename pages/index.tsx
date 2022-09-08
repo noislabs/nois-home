@@ -22,9 +22,13 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Nois Network
-        </h1>
+          <span className={styles.logo}>
+            <Image src="/nois-logo.svg" alt="Nois Logo" width={600} height={200} />
+          </span>
+          <div style={{marginBottom: "50px", height:"100px"}}></div>
+        {/*<h1 className={styles.title}>*/}
+        {/*  Nois Network*/}
+        {/*</h1>*/}
 
         <p className={styles.description}>
           Bring VRF (Verifiable Random Function) that enables
@@ -32,35 +36,23 @@ const Home: NextPage = () => {
           <code className={styles.code}> "randomness":"755952727de5e7..."</code>
         </p>
 
-        {/*<div className={styles.grid}>*/}
-        {/*  <a href="https://nextjs.org/docs" className={styles.card}>*/}
-        {/*    <h2>Documentation &rarr;</h2>*/}
-        {/*    <p>Find in-depth information about Next.js features and API.</p>*/}
-        {/*  </a>*/}
-
-        {/*  <a href="https://nextjs.org/learn" className={styles.card}>*/}
-        {/*    <h2>Learn &rarr;</h2>*/}
-        {/*    <p>Learn about Next.js in an interactive course with quizzes!</p>*/}
-        {/*  </a>*/}
-
-        {/*  <a*/}
-        {/*    href="https://github.com/vercel/next.js/tree/canary/examples"*/}
-        {/*    className={styles.card}*/}
-        {/*  >*/}
-        {/*    <h2>Examples &rarr;</h2>*/}
-        {/*    <p>Discover and deploy boilerplate example Next.js projects.</p>*/}
-        {/*  </a>*/}
-
-        {/*  <a*/}
-        {/*    href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"*/}
-        {/*    className={styles.card}*/}
-        {/*  >*/}
-        {/*    <h2>Deploy &rarr;</h2>*/}
-        {/*    <p>*/}
-        {/*      Instantly deploy your Next.js site to a public URL with Vercel.*/}
-        {/*    </p>*/}
-        {/*  </a>*/}
-        {/*</div>*/}
+        <div className={styles.grid}>
+          <a href="https://twitter.com/NoisNetwork?t=ifCUTzCzJjzFSqUhg1YF4w&s=33" className={styles.card}>
+            <h2>Twitter &rarr;</h2>
+            <p>Follow Nois and stay tuned for further updates!</p>
+          </a>
+          <a href="https://discord.gg/fUmnsg2s" className={styles.card}>
+            <h2>Discord &rarr;</h2>
+            <p>Join our community and meet our developers and members.</p>
+          </a>
+          <a
+              href="https://discord.gg/fUmnsg2s"
+              className={styles.card}
+          >
+            <h2>Get involved &rarr;</h2>
+            <p>We are always looking for new talents.</p>
+          </a>
+        </div>
       </main>
 
       <footer className={styles.footer}>
@@ -70,9 +62,9 @@ const Home: NextPage = () => {
           rel="noopener noreferrer"
         >
           Powered by Nois Labs{' '}
-          {/*<span className={styles.logo}>*/}
-          {/*  <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />*/}
-          {/*</span>*/}
+          <span className={styles.logo}>
+            <Image src="/nois-logo.svg" alt="Nois Logo" width={72} height={25} />
+          </span>
         </a>
       </footer>
     </div>
