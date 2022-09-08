@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <meta property="og:locale" content="en_US" />
         <meta property="og:description" content="Nois Network bring VRF (Verifiable Random Function) to Cosmos ecosystem" />
         {/*<meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />*/}
-        {/*<meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />*/}
+        <meta property="og:image" content="https://nois.network/logo.png" />
         {/*Twitter OG card*/}
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:site" content="@nois" />
