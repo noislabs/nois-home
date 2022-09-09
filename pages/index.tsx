@@ -49,7 +49,7 @@ const Home: NextPage = () => {
               href="https://discord.gg/fUmnsg2s"
               className={styles.card}
           >
-            <h2>Get involved &rarr;</h2>
+            <h2>Involved &rarr;</h2>
             <p>We are always looking for new talents.</p>
           </a>
           <a
