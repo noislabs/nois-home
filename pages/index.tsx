@@ -6,15 +6,22 @@ import {useEffect, useState} from "react";
 
 
 const Home: NextPage = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   if (typeof window !== 'undefined') {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      const newColorScheme = event.matches ? "dark" : "light";
-      newColorScheme == "dark" ? setIsDarkMode(true) : setIsDarkMode(true);
+      event.matches ? setIsDarkMode(true) : setIsDarkMode(false);
+      console.log(event.matches)
     });
   }
 
+  useEffect(()=> {
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches){
+      setIsDarkMode(true)
+    }else {
+      setIsDarkMode(false)
+    }
+  }, [])
   return (
     <div className={styles.container}>
       <Head>
