@@ -7,7 +7,7 @@ import Typed from "react-typed"
 
 const Home: NextPage = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [sentence, setSentence] = useState("755952727");
+  const [sentence, setSentence] = useState("...");
 
   if (typeof window !== 'undefined') {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
