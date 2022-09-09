@@ -10,7 +10,8 @@ const Home: NextPage = () => {
 
   if (typeof window !== 'undefined') {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      setIsDarkMode(!isDarkMode)
+      const newColorScheme = event.matches ? "dark" : "light";
+      newColorScheme == "dark" ? setIsDarkMode(true) : setIsDarkMode(true);
     });
   }
 
