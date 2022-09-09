@@ -22,9 +22,15 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-          <span >
-            <Image src="/logo-white.png" alt="Nois Logo" width={300} height={300} />
-          </span>
+        <span>
+          {typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ?
+
+              <Image src="/logo-white.png" alt="Nois Logo" width={300} height={300} />
+            :
+              <Image src="/logo-black.png" alt="Nois Logo" width={300} height={300} />
+          }
+        </span>
+
           {/*<span style={{marginBottom: "50px", height:"100px"}}></span>*/}
         <h1 className={styles.title}>
           Nois Network
@@ -70,7 +76,12 @@ const Home: NextPage = () => {
         >
           Powered by Nois Labs{' '}
           <span>
-            <Image src="/logo-white.png" alt="Nois Logo" width={50} height={50} />
+             {typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ?
+
+                 <Image src="/logo-white.png" alt="Nois Logo" width={50} height={50} />
+                 :
+                 <Image src="/logo-black.png" alt="Nois Logo" width={50} height={50} />
+             }
           </span>
         </a>
       </footer>
