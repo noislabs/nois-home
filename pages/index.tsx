@@ -41,7 +41,7 @@ const Home: NextPage = () => {
     }
     const timer = setInterval(() => {
       generateRandom()
-    }, 5000)
+    }, 1000)
     return () => clearInterval(timer)
 
   }, [])
