@@ -66,7 +66,7 @@ const Home: NextPage = () => {
           </a>
           <a href="https://discord.gg/fUmnsg2s" className={styles.card}>
             <h2>Discord &rarr;</h2>
-            <p>Join our community and meet our developers and members.</p>
+            <p>Join our community and meet us.</p>
           </a>
           <a
               href="https://discord.gg/fUmnsg2s"
