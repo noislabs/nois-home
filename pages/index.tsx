@@ -54,7 +54,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Bring VRF (Verifiable Random Function) that enables
+          Verifiable Random Function that enables
             Cosmos blockchains to access via IBC random values without compromising security or usability.
           <code className={styles.code}> "randomness":"755952727de5e7..."</code>
         </p>
