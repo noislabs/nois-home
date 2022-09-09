@@ -22,13 +22,13 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-          <span className={styles.logo}>
-            <Image src="/nois-logo.svg" alt="Nois Logo" width={600} height={200} />
+          <span >
+            <Image src="/logo-white.png" alt="Nois Logo" width={300} height={300} />
           </span>
-          <div style={{marginBottom: "50px", height:"100px"}}></div>
-        {/*<h1 className={styles.title}>*/}
-        {/*  Nois Network*/}
-        {/*</h1>*/}
+          {/*<span style={{marginBottom: "50px", height:"100px"}}></span>*/}
+        <h1 className={styles.title}>
+          Nois Network
+        </h1>
 
         <p className={styles.description}>
           Bring VRF (Verifiable Random Function) that enables
@@ -52,6 +52,13 @@ const Home: NextPage = () => {
             <h2>Get involved &rarr;</h2>
             <p>We are always looking for new talents.</p>
           </a>
+          <a
+              href="https://docs.nois.network"
+              className={styles.card}
+          >
+            <h2>Developer &rarr;</h2>
+            <p>Go deeper into Nois tech access to the docs.</p>
+          </a>
         </div>
       </main>
 
@@ -62,8 +69,8 @@ const Home: NextPage = () => {
           rel="noopener noreferrer"
         >
           Powered by Nois Labs{' '}
-          <span className={styles.logo}>
-            <Image src="/nois-logo.svg" alt="Nois Logo" width={72} height={25} />
+          <span>
+            <Image src="/logo-white.png" alt="Nois Logo" width={50} height={50} />
           </span>
         </a>
       </footer>
