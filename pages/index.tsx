@@ -3,10 +3,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {useEffect, useState} from "react";
-
+import Typed from "react-typed"
 
 const Home: NextPage = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [sentence, setSentence] = useState("");
 
   if (typeof window !== 'undefined') {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
@@ -15,12 +16,29 @@ const Home: NextPage = () => {
     });
   }
 
+  function generateRandom() {
+    const subject = ["The hawk", "The boy", "The girl", "The daughter", "The doctor", "The children", "The professor"]
+    const verb = ["eat", "cook", "grill", "broil", "roast", "stew", "gratin", "stir-Fry", "bake", "caramelize", "steam", "saute", "toast", "poach"]
+    const object = ["bacon", "pancake", "egg", "beef", "chicken", "meat", "duck", "ham", "kidneys", "lamb", "liver", "apple", "orange", "banana", "potato", "cheese", "apricot"]
+
+    const subject_rand = Math.floor(Math.random() * subject.length)
+    const verb_rand = Math.floor(Math.random() * verb.length)
+    const object_rand = Math.floor(Math.random() * object.length)
+    let full_sentence = subject[subject_rand] + " " + verb[verb_rand] + " " + object[object_rand]
+    setSentence(full_sentence)
+  }
+
   useEffect(()=> {
     if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches){
       setIsDarkMode(true)
     }else {
       setIsDarkMode(false)
     }
+    const timer = setInterval(() => {
+      generateRandom()
+    }, 1000)
+    return () => clearInterval(timer)
+
   }, [])
   return (
     <div className={styles.container}>
@@ -54,10 +72,21 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Bring VRF (Verifiable Random Function) that enables
+          Verifiable Random Function that enables
             Cosmos blockchains to access via IBC random values without compromising security or usability.
           <code className={styles.code}> "randomness":"755952727de5e7..."</code>
         </p>
+
+        <Typed
+            className={styles.description}
+            strings={[
+              sentence
+            ]}
+            typeSpeed={150}
+            backSpeed={100}
+            loop
+        />
+
 
         <div className={styles.grid}>
           <a href="https://twitter.com/NoisNetwork?t=ifCUTzCzJjzFSqUhg1YF4w&s=33" className={styles.card}>
