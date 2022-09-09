@@ -82,7 +82,7 @@ const Home: NextPage = () => {
         </p>
 
           <code className={styles.code}> "randomness":<Typed
-              className={styles.description}
+              className={styles.code}
               strings={[
                 sentence
               ]}
