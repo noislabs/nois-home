@@ -7,7 +7,7 @@ import Typed from "react-typed"
 
 const Home: NextPage = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [sentence, setSentence] = useState("");
+  const [sentence, setSentence] = useState("755952727");
 
   if (typeof window !== 'undefined') {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
@@ -16,16 +16,21 @@ const Home: NextPage = () => {
     });
   }
 
-  function generateRandom() {
-    const subject = ["The hawk", "The boy", "The girl", "The daughter", "The doctor", "The children", "The professor"]
-    const verb = ["eat", "cook", "grill", "broil", "roast", "stew", "gratin", "stir-Fry", "bake", "caramelize", "steam", "saute", "toast", "poach"]
-    const object = ["bacon", "pancake", "egg", "beef", "chicken", "meat", "duck", "ham", "kidneys", "lamb", "liver", "apple", "orange", "banana", "potato", "cheese", "apricot"]
+  // function generateRandom() {
+  //   const subject = ["The hawk", "The boy", "The girl", "The daughter", "The doctor", "The children", "The professor"]
+  //   const verb = ["eat", "cook", "grill", "broil", "roast", "stew", "gratin", "stir-Fry", "bake", "caramelize", "steam", "saute", "toast", "poach"]
+  //   const object = ["bacon", "pancake", "egg", "beef", "chicken", "meat", "duck", "ham", "kidneys", "lamb", "liver", "apple", "orange", "banana", "potato", "cheese", "apricot"]
+  //
+  //   const subject_rand = Math.floor(Math.random() * subject.length)
+  //   const verb_rand = Math.floor(Math.random() * verb.length)
+  //   const object_rand = Math.floor(Math.random() * object.length)
+  //   let full_sentence = subject[subject_rand] + " " + verb[verb_rand] + " " + object[object_rand]
+  //   setSentence(full_sentence)
+  // }
 
-    const subject_rand = Math.floor(Math.random() * subject.length)
-    const verb_rand = Math.floor(Math.random() * verb.length)
-    const object_rand = Math.floor(Math.random() * object.length)
-    let full_sentence = subject[subject_rand] + " " + verb[verb_rand] + " " + object[object_rand]
-    setSentence(full_sentence)
+  function generateRandom() {
+    const rand = Math.floor(Math.random() * 755952727)
+    setSentence("\""+ rand.toString() + "..." + "\"")
   }
 
   useEffect(()=> {
@@ -36,7 +41,7 @@ const Home: NextPage = () => {
     }
     const timer = setInterval(() => {
       generateRandom()
-    }, 1000)
+    }, 5000)
     return () => clearInterval(timer)
 
   }, [])
@@ -74,18 +79,20 @@ const Home: NextPage = () => {
         <p className={styles.description}>
           Verifiable Random Function that enables
             Cosmos blockchains to access via IBC random values without compromising security or usability.
-          <code className={styles.code}> "randomness":"755952727de5e7..."</code>
         </p>
 
-        <Typed
-            className={styles.description}
-            strings={[
-              sentence
-            ]}
-            typeSpeed={150}
-            backSpeed={100}
-            loop
-        />
+          <code className={styles.code}> "randomness":<Typed
+              className={styles.description}
+              strings={[
+                sentence
+              ]}
+              typeSpeed={150}
+              backSpeed={100}
+              loop
+          /></code>
+
+
+
 
 
         <div className={styles.grid}>
