@@ -2,8 +2,18 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import {useEffect, useState} from "react";
+
 
 const Home: NextPage = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  if (typeof window !== 'undefined') {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      setIsDarkMode(!isDarkMode)
+    });
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -23,8 +33,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <span>
-          {typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ?
-
+          { isDarkMode ?
               <Image src="/logo-white.png" alt="Nois Logo" width={300} height={300} />
             :
               <Image src="/logo-black.png" alt="Nois Logo" width={300} height={300} />
@@ -76,7 +85,7 @@ const Home: NextPage = () => {
         >
           Powered by Nois Labs{' '}
           <span>
-             {typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ?
+             {isDarkMode ?
 
                  <Image src="/logo-white.png" alt="Nois Logo" width={50} height={50} />
                  :
