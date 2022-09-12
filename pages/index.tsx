@@ -65,31 +65,31 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <span>
           { isDarkMode ?
-              <Image src="/logo-white.png" alt="Nois Logo" width={300} height={300} />
+              <Image src="/white-full-logo.svg" alt="Nois Logo" width={500} height={300} />
             :
-              <Image src="/logo-black.png" alt="Nois Logo" width={300} height={300} />
+              <Image src="/black-full-logo.svg" alt="Nois Logo" width={500} height={300} />
           }
         </span>
+        <code className={styles.code}> "randomness":<Typed
+            className={styles.description}
+            strings={[
+              sentence
+            ]}
+            typeSpeed={150}
+            backSpeed={100}
+            loop
+        /></code>
 
           {/*<span style={{marginBottom: "50px", height:"100px"}}></span>*/}
-        <h1 className={styles.title}>
+        <h1 className={styles.title} style={{display: "none"}}>
           Nois Network
         </h1>
 
         <p className={styles.description}>
-          Verifiable Random Function that enables
-            Cosmos blockchains to access via IBC random values without compromising security or usability.
+          Brings random beacons to Cosmos blockchains without compromising security or usability
+          by leveraging drand and IBC.
         </p>
 
-          <code className={styles.code}> "randomness":<Typed
-              className={styles.description}
-              strings={[
-                sentence
-              ]}
-              typeSpeed={150}
-              backSpeed={100}
-              loop
-          /></code>
 
 
 
@@ -131,9 +131,9 @@ const Home: NextPage = () => {
           <span>
              {isDarkMode ?
 
-                 <Image src="/logo-white.png" alt="Nois Logo" width={50} height={50} />
+                 <Image src="/white-logo.svg" alt="Nois Logo" width={50} height={50} />
                  :
-                 <Image src="/logo-black.png" alt="Nois Logo" width={50} height={50} />
+                 <Image src="/black-logo.svg" alt="Nois Logo" width={50} height={50} />
              }
           </span>
         </a>
