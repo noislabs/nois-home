@@ -48,10 +48,10 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Nois Network</title>
+        <title>Nois Network | Get randomness on the fly</title>
         <meta name="description" content="Nois Network brings random beacons to Cosmos blockchains without compromising security or usability by leveraging drand and IBC." />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="Nois Network" />
+        <meta property="og:title" content="Nois Network | Get randomness on the fly" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:description" content="Nois Network brings random beacons to Cosmos blockchains without compromising security or usability by leveraging drand and IBC." />
         {/*<meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />*/}
