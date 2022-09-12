@@ -3,10 +3,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {useEffect, useState} from "react";
-
+import Typed from "react-typed"
 
 const Home: NextPage = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [sentence, setSentence] = useState("...");
 
   if (typeof window !== 'undefined') {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
@@ -15,12 +16,34 @@ const Home: NextPage = () => {
     });
   }
 
+  // function generateRandom() {
+  //   const subject = ["The hawk", "The boy", "The girl", "The daughter", "The doctor", "The children", "The professor"]
+  //   const verb = ["eat", "cook", "grill", "broil", "roast", "stew", "gratin", "stir-Fry", "bake", "caramelize", "steam", "saute", "toast", "poach"]
+  //   const object = ["bacon", "pancake", "egg", "beef", "chicken", "meat", "duck", "ham", "kidneys", "lamb", "liver", "apple", "orange", "banana", "potato", "cheese", "apricot"]
+  //
+  //   const subject_rand = Math.floor(Math.random() * subject.length)
+  //   const verb_rand = Math.floor(Math.random() * verb.length)
+  //   const object_rand = Math.floor(Math.random() * object.length)
+  //   let full_sentence = subject[subject_rand] + " " + verb[verb_rand] + " " + object[object_rand]
+  //   setSentence(full_sentence)
+  // }
+
+  function generateRandom() {
+    const rand = Math.floor(Math.random() * 755952727)
+    setSentence("\""+ rand.toString() + "..." + "\"")
+  }
+
   useEffect(()=> {
     if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches){
       setIsDarkMode(true)
     }else {
       setIsDarkMode(false)
     }
+    const timer = setInterval(() => {
+      generateRandom()
+    }, 1000)
+    return () => clearInterval(timer)
+
   }, [])
   return (
     <div className={styles.container}>
@@ -42,21 +65,29 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <span>
           { isDarkMode ?
-              <Image src="/logo-white.png" alt="Nois Logo" width={300} height={300} />
+              <Image src="/white-full-logo.svg" alt="Nois Logo" width={500} height={300} />
             :
-              <Image src="/logo-black.png" alt="Nois Logo" width={300} height={300} />
+              <Image src="/black-full-logo.svg" alt="Nois Logo" width={500} height={300} />
           }
         </span>
+        <code className={styles.code}> "randomness":<Typed
+            className={styles.description}
+            strings={[
+              sentence
+            ]}
+            typeSpeed={150}
+            backSpeed={100}
+            loop
+        /></code>
 
           {/*<span style={{marginBottom: "50px", height:"100px"}}></span>*/}
-        <h1 className={styles.title}>
+        <h1 className={styles.title} style={{display: "none"}}>
           Nois Network
         </h1>
 
         <p className={styles.description}>
-          Verifiable Random Function that enables
-            Cosmos blockchains to access via IBC random values without compromising security or usability.
-          <code className={styles.code}> "randomness":"755952727de5e7..."</code>
+          Brings random beacons to Cosmos blockchains without compromising security or usability
+          by leveraging drand and IBC.
         </p>
 
         <div className={styles.grid}>
@@ -95,9 +126,9 @@ const Home: NextPage = () => {
           <span>
              {isDarkMode ?
 
-                 <Image src="/logo-white.png" alt="Nois Logo" width={50} height={50} />
+                 <Image src="/white-logo.svg" alt="Nois Logo" width={50} height={50} />
                  :
-                 <Image src="/logo-black.png" alt="Nois Logo" width={50} height={50} />
+                 <Image src="/black-logo.svg" alt="Nois Logo" width={50} height={50} />
              }
           </span>
         </a>
