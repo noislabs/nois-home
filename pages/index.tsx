@@ -90,11 +90,6 @@ const Home: NextPage = () => {
           by leveraging drand and IBC.
         </p>
 
-
-
-
-
-
         <div className={styles.grid}>
           <a href="https://twitter.com/NoisNetwork?t=ifCUTzCzJjzFSqUhg1YF4w&s=33" className={styles.card}>
             <h2>Twitter &rarr;</h2>
