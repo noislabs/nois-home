@@ -49,17 +49,17 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Nois Network</title>
-        <meta name="description" content="Nois Network bring VRF (Verifiable Random Function) to Cosmos ecosystem" />
+        <meta name="description" content="Nois Network brings random beacons to Cosmos blockchains without compromising security or usability by leveraging drand and IBC." />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Nois Network" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:description" content="Nois Network bring VRF (Verifiable Random Function) to Cosmos ecosystem" />
+        <meta property="og:description" content="Nois Network brings random beacons to Cosmos blockchains without compromising security or usability by leveraging drand and IBC." />
         {/*<meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />*/}
         <meta property="og:image" content="https://nois.network/logo.png" />
         {/*Twitter OG card*/}
         <meta name="twitter:card" content="summary_large_image"></meta>
-        <meta name="twitter:site" content="@nois" />
-        <meta name="twitter:creator" content="@nois" />
+        <meta name="twitter:site" content="@NoisNetwork" />
+        <meta name="twitter:creator" content="@NoisNetwork" />
       </Head>
 
       <main className={styles.main}>
