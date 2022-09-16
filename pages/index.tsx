@@ -95,7 +95,7 @@ const Home: NextPage = () => {
             <h2>Twitter &rarr;</h2>
             <p>Follow Nois and stay tuned for further updates!</p>
           </a>
-          <a href="https://discord.gg/fUmnsg2s" className={styles.card}>
+          <a href="https://chat.nois.network/" className={styles.card}>
             <h2>Discord &rarr;</h2>
             <p>Join our community and meet us.</p>
           </a>
