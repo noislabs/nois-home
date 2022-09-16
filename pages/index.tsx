@@ -100,7 +100,7 @@ const Home: NextPage = () => {
             <p>Join our community and meet us.</p>
           </a>
           <a
-              href="https://discord.gg/fUmnsg2s"
+              href="https://chat.nois.network/"
               className={styles.card}
           >
             <h2>Involved &rarr;</h2>
