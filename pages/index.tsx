@@ -100,13 +100,6 @@ const Home: NextPage = () => {
             <p>Join our community and meet us.</p>
           </a>
           <a
-              href="https://chat.nois.network/"
-              className={styles.card}
-          >
-            <h2>Involved &rarr;</h2>
-            <p>We are always looking for new talents.</p>
-          </a>
-          <a
               href="https://whitepaper.nois.network/"
               className={styles.card}
           >
