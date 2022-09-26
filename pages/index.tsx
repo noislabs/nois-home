@@ -111,14 +111,14 @@ const Home: NextPage = () => {
               className={styles.card}
           >
             <h2>Whitepaper &rarr;</h2>
-            <p>Go deeper into Nois tech. Access to the whitepaper.</p>
+            <p>Go deeper into Nois tech.</p>
           </a>
           <a
               href="https://docs.nois.network"
               className={styles.card}
           >
             <h2>Documentation &rarr;</h2>
-            <p>Get quick guides for different usecases. Access to the docs.</p>
+            <p>Get quick guides for different usecases.</p>
           </a>
         </div>
       </main>
