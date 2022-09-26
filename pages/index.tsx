@@ -107,11 +107,18 @@ const Home: NextPage = () => {
             <p>We are always looking for new talents.</p>
           </a>
           <a
+              href="https://whitepaper.nois.network/"
+              className={styles.card}
+          >
+            <h2>Whitepaper &rarr;</h2>
+            <p>Go deeper into Nois tech. Access to the whitepaper.</p>
+          </a>
+          <a
               href="https://docs.nois.network"
               className={styles.card}
           >
-            <h2>Developer &rarr;</h2>
-            <p>Go deeper into Nois tech access to the docs.</p>
+            <h2>Documentation &rarr;</h2>
+            <p>Get quick guides for different usecases. Access to the docs.</p>
           </a>
         </div>
       </main>
