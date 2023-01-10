@@ -125,7 +125,7 @@ const Home: NextPage = () => {
               className={styles.card}
           >
             <h2>Block Explorer &rarr;</h2>
-            <p>Explore the blocks and transactions within the nois blockchain.</p>
+            <p>Explore the blocks and transactions within the Nois blockchain.</p>
           </a>
         </div>
       </main>
