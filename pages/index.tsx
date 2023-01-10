@@ -124,7 +124,7 @@ const Home: NextPage = () => {
               href="https://explorer.mcbnode.online/nois/staking"
               className={styles.card}
           >
-            <h2>Block explorer &rarr;</h2>
+            <h2>Block Explorer &rarr;</h2>
             <p>Explore the blocks and transactions within the nois blockchain.</p>
           </a>
         </div>
