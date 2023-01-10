@@ -113,6 +113,20 @@ const Home: NextPage = () => {
             <h2>Documentation &rarr;</h2>
             <p>Get quick guides for different usecases.</p>
           </a>
+          <a
+              href="https://randomness.nois.network/"
+              className={styles.card}
+          >
+            <h2>On-chain Randomness &rarr;</h2>
+            <p>Visualise the verified randomness.</p>
+          </a>
+          <a
+              href="https://explorer.mcbnode.online/nois/staking"
+              className={styles.card}
+          >
+            <h2>Block explorer &rarr;</h2>
+            <p>Explore the blocks and transactions within the nois blockchain.</p>
+          </a>
         </div>
       </main>
 
